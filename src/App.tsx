@@ -1,9 +1,13 @@
-function App() {
+import { BrowserRouter } from "react-router-dom";
+import { ApplicationRoutes } from "./routes/index";
+import "./global.css"
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <BrowserRouter>
+      <ApplicationRoutes />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
