@@ -5,35 +5,45 @@ export const HeaderContent = styled.header`
   width: 100%;
   height: 6rem;
   display: flex;
-  box-shadow: 0px 11px 31px -5px rgba(2, 115, 115, 0.3);
+  box-shadow: 0px 15px 34px 8px rgba(0,0,0,0.20);
+  z-index: 10;
 `;
 
 export const Logo = styled.img`
   width: 15rem;
   height: auto;
-  margin-left: 20rem;
+  margin-left: 10rem;
+  @media screen and (max-width: 510px) {
+    margin-left: 5rem;
+  }
 `;
 
-export const HeaderUl = styled.ul`
+export const Links = styled.div`
+  display: flex;
+  width: 25vw;
+  justify-content: space-between;
+  margin-left: 10rem;
+`;
+
+export const HeaderLink = styled.li`
   display: flex;
   align-items: center;
-  width: 100%;
-  justify-content: flex-end;
-  padding-right: 20rem;
-  li {
-    padding: 0 0 0 10rem;
-    list-style: none;
-    .Link-Li {
-      text-decoration: none;
-      color: #ebe9ea;
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      transition: 0.3s;
-      :hover {
-        color: #172026;
-        font-size: 2.1rem;
-      }
+  height: 100%;
+  .Link-Li {
+    text-decoration: none;
+    color: #ebe9ea;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    transition: 0.3s;
+    :hover {
+      color: #172026;
+      font-size: 1.9rem;
+    }
+    @media (max-width: 980px) {
+      display: none;
     }
   }
 `;
+
+

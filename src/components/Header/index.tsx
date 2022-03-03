@@ -1,4 +1,4 @@
-import { HeaderContent, Logo, HeaderUl } from "./style";
+import { HeaderContent, Logo, HeaderLink, Links } from "./style";
 import { Link } from "react-router-dom";
 import LogoPng from "../../assets/logoBePragmatic.png";
 
@@ -8,28 +8,28 @@ export const Header = () => {
       <Link to="/">
         <Logo src={LogoPng} alt="Be Pragmatic Logo" />
       </Link>
-      <HeaderUl>
-        <li>
-          <Link to="./" className="Link-Li">
+      <Links>
+        <HeaderLink>
+          <Link to="/" className="Link-Li">
             Home
           </Link>
-        </li>
-        <li>
-          <Link to="./social" className="Link-Li">
+        </HeaderLink>
+        <HeaderLink>
+          <Link to="/social" className="Link-Li">
             Social
           </Link>
-        </li>
-        <li>
-          <Link to="./projects" className="Link-Li">
+        </HeaderLink>
+        <HeaderLink>
+          <Link to="/projects" className="Link-Li">
             Projects
           </Link>
-        </li>
-        <li>
-          <Link to="./blog" className="Link-Li">
+        </HeaderLink>
+        <HeaderLink>
+          <Link to="/blog" className="Link-Li">
             Blog
           </Link>
-        </li>
-      </HeaderUl>
+        </HeaderLink>
+      </Links>
     </HeaderContent>
   );
 };
