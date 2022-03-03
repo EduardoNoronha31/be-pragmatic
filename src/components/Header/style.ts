@@ -31,9 +31,6 @@ export const HeaderLink = styled.li`
   height: 100%;
   .Link-Li {
     text-decoration: none;
-    color: #ebe9ea;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
     font-size: 1.7rem;
     transition: 0.3s;
     :hover {
