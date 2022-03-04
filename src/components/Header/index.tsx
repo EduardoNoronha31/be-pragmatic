@@ -1,8 +1,24 @@
-import { HeaderContent, Logo, HeaderLink, Links } from "./style";
+import { HeaderContent, Logo, HeaderLink, Links, SwitchDiv, SwitchText } from "./style";
 import { Link } from "react-router-dom";
 import LogoPng from "../../assets/logoBePragmatic.png";
+import Switch from "react-switch";
+import { shade } from "polished";
+import English from "../../languages/English.json";
+import Portuguese from "../../languages/Portuguese.json";
 
-export const Header = () => {
+type HeaderProps = {
+  setLang?: any;
+  lang?: any;
+}
+
+export const Header = (props: HeaderProps) => {
+  function changeLang(event: any) {
+    if (event) {
+      return Portuguese;
+    } else {
+      return English;
+    }
+  }
   return (
     <HeaderContent>
       <Link to="/">
@@ -30,6 +46,22 @@ export const Header = () => {
           </Link>
         </HeaderLink>
       </Links>
+      <SwitchDiv>
+        <SwitchText>Translate</SwitchText> 
+        <Switch
+          onChange={(event) => {
+            props.setLang(changeLang(event));
+          }}
+          checked={props.lang === Portuguese}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          height={10}
+          width={40}
+          handleDiameter={20}
+          offColor={shade(0.2, "#027373")}
+          onColor="#172026"
+        />
+      </SwitchDiv>
     </HeaderContent>
   );
 };

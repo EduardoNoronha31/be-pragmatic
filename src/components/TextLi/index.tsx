@@ -6,10 +6,11 @@ type TextSubTitleProps = {
   additionalText2?: string;
 };
 
-export const TextLi = (props: TextSubTitleProps) => {
+export const LiText = (props: TextSubTitleProps) => {
   return (
     <TextDiv>
-      <Text>{props.text}</Text><ListText>{props.additionalText1}</ListText>
+      <Text>{props.text}</Text>
+      <ListText>{props.additionalText1}</ListText>
       <ListText>{props.additionalText2}</ListText>
     </TextDiv>
   );

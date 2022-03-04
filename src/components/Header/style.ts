@@ -5,24 +5,21 @@ export const HeaderContent = styled.header`
   width: 100%;
   height: 6rem;
   display: flex;
-  box-shadow: 0px 15px 34px 8px rgba(0,0,0,0.20);
+  box-shadow: 0px 15px 34px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
+  justify-content: space-around;
+  padding: 0 .5rem;
 `;
 
 export const Logo = styled.img`
   width: 15rem;
   height: auto;
-  margin-left: 10rem;
-  @media screen and (max-width: 510px) {
-    margin-left: 5rem;
-  }
 `;
 
 export const Links = styled.div`
   display: flex;
   width: 25vw;
   justify-content: space-between;
-  margin-left: 10rem;
 `;
 
 export const HeaderLink = styled.li`
@@ -43,4 +40,14 @@ export const HeaderLink = styled.li`
   }
 `;
 
+export const SwitchDiv = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+`;
 
+export const SwitchText = styled.span`
+  font-size: 1.4rem;
+  border-bottom: 0.1rem solid #67abab7e;
+  margin-right: 1rem;
+`;
