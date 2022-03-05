@@ -7,10 +7,10 @@ import { Home, HomeContent, Main } from "./style";
 import English from "../../languages/English.json";
 
 export const HomePage = () => {
-  const [ lang, setLang ] = useState(English);
+  const [lang, setLang] = useState(English);
   return (
     <HomeContent>
-      <Header setLang={setLang} lang={lang}/>
+      <Header setLang={setLang} lang={lang} />
       <Home>
         <Main>
           <TextTitle text="Be Pragmatic" />
@@ -19,12 +19,8 @@ export const HomePage = () => {
             additionalText1={lang["Li-Text-AdditionalText1"]}
             additionalText2={lang["Li-Text-AdditionalText2"]}
           />
-          <MainText
-            text={lang["Main-Text-Text-1"]}
-          />
-          <MainText
-            text={lang["Main-Text-Text-2"]}
-          />
+          <MainText text={lang["Main-Text-Text-1"]} />
+          <MainText text={lang["Main-Text-Text-2"]} />
         </Main>
       </Home>
     </HomeContent>
