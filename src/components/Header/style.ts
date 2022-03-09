@@ -1,8 +1,14 @@
 import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
+import { linearGradient } from "polished";
 
 export const HeaderContent = styled.header`
-  background-color: #027373;
+  /* background-color: #027373; */
+  ${linearGradient({
+    colorStops: ["#025353 0%", "#027373 100%"],
+    toDirection: "to top right",
+    fallback: "#027373",
+  })}
   width: 100%;
   height: 6rem;
   display: flex;
