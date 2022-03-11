@@ -31,10 +31,9 @@ export const Main = styled.div`
   flex-direction: column;
   .LinkMain {
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.6rem;
     padding-left: 1rem;
     transition: color .15s ease-in;
-    text-decoration-color: #027373;
     :hover {
       color: #027373;
     }
